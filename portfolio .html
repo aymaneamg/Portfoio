@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+            <h1> <Span>A</Span>ymane <span>EL</span>AAMAJ</h1> 
+            <div class="content">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="meme" >Home</a></li>
+                        <li><a href="#Aboutme" class="meme">About Me</a></li>
+                        <li><a href="#" class="meme">Portfolio</a></li>
+                        <li><a href="#" class="meme">contact</a></li>
+                        
+                    </ul>
+                </nav>
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- ********************About********************* -->
+    <div class="about" id="Aboutme">
+        <div class="image">
+            <img src="../html/aymane.jpg" alt="">
+        </div>
+        <div class="text">
+            <h2 class="title">
+                About ME
+            </h2>
+            <p>
+                élève ingénieur 1er année à l'ecole hassania des travaux public 
+                je suis à la recherche d'un stage d'initaition en <span>Développement web</span>
+
+            </p>
+            <div class="tab-title">
+                <p  class="tab-links" id="comp">Competence</p>
+                <!-- <p class="tab-links">experience</p> -->
+                <p class="tab-links" id="edu">education</p>
+            </div>
+            <div class="tab-content" id="competance">
+                <ul>
+                    <li><span>language de programation :</span><br> Python,C++,C</li>
+                    <li><span>technologie web :</span><br> HTML ,CSS,JavaScript</li>
+                    <li><span>SGBD :</span><br>SQL,SQLITE3</li>
+                    <li><span>Logiciel SIG :</span><br>ArcGIS,QGIS,AutoCad</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="education">
+                <ul>
+                    <li><span>2020/2021 :</span><br> Bac SM A </li>
+                    <li><span>2021=>2023 :</span><br> Class préparatoire Mp</li>
+                    <li><span>2023=>2026</span><br>ECOLE HASSANIA DES TRAVAUX PUBLIC</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ****************Porfolio************* -->
+    <div class="portfolio" id="Portfolio">
+        <h2 class="title">
+            My Work
+        </h2>
+        <div class="my_work">
+            
+            
+            
+                <div class="github">
+                    <img id="get"  class="git" src="../html/github.jpg" alt="">
+                    <div class="layer">
+                        <a href="https://github.com/" id="github"  class="first">github</a>
+                        <p>Bienvenue dans mon github</p>
+                    </div>
+                    
+                </div>
+                <div class="github"> 
+                    <img id="lik" class="git" src="../html/linkedin.jpeg" alt="">
+                    <div class="layer">
+                        <a href="https://www.linkedin.com/in/aymane-el-aamaj-bb4525220/" id="linkdein" class="first" >linkdin</a>
+                        <p>Bienvenue dans mon linkedin</p>
+                    </div>
+                </div>
+        </div>
+            
+
+
+        
+    </div>
+    <!-- ***********************CONTACT***************** -->
+    <div class="contact" id="Contact">
+        <h2 class="title">
+            CONTACT
+        </h2>
+        <div class="contaact">
+            <div class="coordonne">
+                <p id="tele" >  <span>Telephone : </span>0624799715</p>
+                <p id="tele" > <span>Mail : </span>aymanee341@gmail.com</p>
+            </div>
+            <div class="contact_me">
+                <form name="submit-to-google-sheet">
+                    <!-- <input class="name" type="text" placeholder="entreprise" required> -->
+                    <input class="name"  name="name" type="text" placeholder="Name" required >
+                    <input class="mail"  name="email" type="email" placeholder="Mail" required>
+                    <textarea class="mail" cols="30" rows="10"  name="Message"  placeholder="your Message" required></textarea>
+                    <button  type="submit" class="btn2">Envoyer</button>
+                </form>
+                
+
+            </div>
+        </div>   
+
+    </div>
+    <!-- **************footer************** -->
+    <div class="fotter">
+        &copy; 2024 Copyright Porfolio
+    </div>  
+    <script src="portfolio.js" ></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyLYO1YLJJMX8PEdWmC2qGk1YZrH2zIEmptQNwBDXfUX4yrBRzOvHrQvuiycrsGBKeV/exec'
+        const form = document.forms['submit-to-google-sheet']
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: rgb(2, 2, 2)
+}
+.head{
+    background-image: url(../html/aymane.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 95% 25%;
+    /* background-position: center; */
+
+}
+.meme{
+    position: relative;
+}
+.meme::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background:rgb(227, 34, 230)  ;
+    left: 0;
+    bottom: -5px;
+}
+
+h1{
+    color: aliceblue;
+    font-family: 'Playfair Display', serif;
+    
+}
+span{
+    color: rgb(227, 34, 230);
+
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+
+}
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 10px;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.title{
+    color:rgb(227, 34, 230) ;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    padding: 10px;
+
+}
+
+.image {
+    flex-basis: 30%;
+}
+.image img {
+    width: 100%;
+    border-radius: 15px;
+}
+.tab-title{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 400;
+    color:rgb(227, 34, 230) ;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    background:rgba(207, 7, 54, 0.575)  ;
+    left: 0;
+    bottom: -5px;
+}
+
+.tab-content li span{
+    color: rgba(207, 7, 54, 0.575);
+    font-weight: 600;
+}
+
+.tab-content li{
+    list-style: none;
+}
+.hide{
+    display: none;
+}
+.my_work{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 90px;
+    color: #ffffff;
+    position: relative;
+    margin: 0 50px;
+    
+
+}
+.git{
+    width: 250px;
+    height: 300px;
+}
+.github{
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; 
+    
+    
+    
+}
+
+.github img{
+    width: 100%;
+    border-radius: 10px; 
+    display: block; 
+    transition: transform 0.5s;
+}
+.first{
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff8fd;
+    font-family: 'Playfair Display', serif;
+}
+
+.layer{
+    width: 100%; 
+    height: 0;
+    background:linear-gradient(rgba(39, 37, 37, 0.5),#a13d7f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    transition: height  0.5s;
+    
+    color: #000;
+    font-size: 20px;
+
+    overflow: hidden;
+}
+.github:hover img{
+    transform: scale(1.1);
+}
+.github:hover .layer{
+    height: 100%;
+}
+
+/* **************contact*********************** */
+.contact{
+    margin: 40px 0;
+}
+
+.contaact{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap:30px;
+    color: #ffffff;
+    flex-basis: 60%;
+}
+.coordonne{
+    margin: 40px 0;
+    flex-basis: 35%;
+
+}
+
+#tele{
+    margin:15px; 
+}
+.name,.mail{
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    background: #222;
+    outline: none;
+    color: aliceblue;
+}
+.btn2{
+    background-color: #dd2599;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+
+}
+/* *********footer********* */
+.fotter{
+    background-color: #ba67a7;
+    padding: 15px ;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+}
